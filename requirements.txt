@@ -19,3 +19,4 @@ ipython
 tzlocal
 pillow
 matplotlib
+pytest

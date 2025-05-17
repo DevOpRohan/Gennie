@@ -10,7 +10,7 @@ from watchdog.observers import Observer
 from data_loaders.doc_loaders import ocr_pdf, ocr_image
 from todo_manager.db import retry_on_lock, init_db
 
-from vector_store import VectorStore
+from ingestor.vector_store import VectorStore
 
 
 

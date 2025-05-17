@@ -8,7 +8,7 @@ import openai
 import requests
 
 from config.settings import OPEN_AI_API_KEY
-from tool_manager import ToolManager
+from tool_manager.ToolManager import ToolManager
 
 
 json_mode_supported_models = [

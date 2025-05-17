@@ -81,8 +81,10 @@ def open_ai_tools_execution(tool_manager: ToolManager, tools: List[Dict[str, Any
 
             # Check if the response is longer than 7000 characters
             if len(function_response_str) > 7000:
-                function_response_str = function_response_str[
-                                        :7000] + " RESPONSE IS CUTTED BECAUSE OF MORE THAN 1000 CHARS"
+                function_response_str = (
+                    function_response_str[:7000]
+                    + " RESPONSE TRUNCATED BECAUSE IT EXCEEDED 7000 CHARS"
+                )
 
             # Format the successful response
             response = {

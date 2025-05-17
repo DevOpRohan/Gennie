@@ -11,7 +11,10 @@ from code_interpreter.code_interpreter_utils import pycode_parser, code_interpre
 
 from datetime import datetime
 
-from tools import tool_manager
+# The tools module resides within the agent package. The previous import
+# attempted to import it as a top level module which fails because such a
+# module does not exist. Import it from the correct package instead.
+from agent.tools import tool_manager
 from utils.llm import open_ai_tools_execution, openai_chat_async
 
 sys_prompt_template = """You are Gennie, a super-intelligent assistant capable of performing various tasks such as computations, managing ToDo lists, answering user queries, remembering information, and handling file management tasks (limited to the root directory and its subdirectories).
